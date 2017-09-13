@@ -12,7 +12,7 @@ Safe work with unicode strings with emoji chars up to *Emoji 3.0* (Unicode 9.0)
 ```javascript
 import unicode from '@jukben/unicode'
 
-`console.log(unicode10("hello ✌🏻").reverse(6)); // ✌🏻 olleh`
+`console.log(unicode10("hello ✌🏻").reverse()); // ✌🏻 olleh`
 ```
 
 ### API
@@ -22,7 +22,7 @@ import unicode from '@jukben/unicode'
 #### `.reverse()`
 returns correctly reversed string
 
-`console.log(unicode10("hello ✌🏻").reverse(6)); // ✌🏻 olleh`
+`console.log(unicode10("hello ✌🏻").reverse()); // ✌🏻 olleh`
 #### `.length`
 returns correct length
 
