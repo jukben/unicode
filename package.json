@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/jukben/unicode",
   "keywords": [
-    "unicode 9",
-    "emoji 3.0"
+    "unicode",
+    "emoji"
   ],
   "scripts": {
     "test": "jest",
