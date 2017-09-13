@@ -6,7 +6,7 @@ const isFitzpatric = (prev, curr) => {
   return /[\u{1F3FB}-\u{1F3FF}]$/u.test(`${prev}${curr}`);
 };
 
-const unicode10 = string => {
+const unicode = string => {
   const chars = [...string].reduce((a, v, i, arr) => {
     const prev = a[a.length - 1];
     const curr = arr[i];
@@ -27,7 +27,7 @@ const unicode10 = string => {
 
   const reverse = () => chars.reverse().join('');
 
-  const charCodeAt = place => chars[place];
+  const charAt = place => chars[place];
 
   const hexCodeAt = place => {
     if (!chars[place]) return undefined;
@@ -38,10 +38,10 @@ const unicode10 = string => {
   return {
     reverse,
     chars,
-    length: chars.length,
-    charCodeAt,
+    charAt,
     hexCodeAt,
+    length: chars.length,
   };
 };
 
-export default unicode10;
+export default unicode;

@@ -1,6 +1,11 @@
-# @jukben/emoji-search
+# @jukben/unicode
 
 Safe work with unicode strings with emoji chars up to *Emoji 3.0* (Unicode 9.0)
+
+
+## Install
+
+`npm i --save-dev @jukben/unicode`
 
 ## Usage
 
@@ -32,10 +37,6 @@ returns hax code at the index or undefined
 returns arrays of chars
 
 `console.log(unicode10("hello ✌🏻").chars); // ["h", "e", "l", "l", "o", " ", "✌🏻"]`
-
-## Install
-
-`npm i --save-dev @jukben/unicode`
 
 ## License
 
