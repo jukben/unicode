@@ -1,33 +1,42 @@
 # @jukben/emoji-search
 
-Exposes search function which returns arrays of related emojis: 
+Safe work with unicode strings with emoji chars up to *Emoji 3.0* (Unicode 9.0)
 
-```javascript 
-type Emoji = {
-    category: string
-    char: string,
-    fitzpatrick_scale: boolean
-    keywords: Array<string>,
-    name: string,
-}
-
-(string) => Array<Emoji>
-```
-
-Based on [emojilib](https://github.com/muan/emojilib) and wonderful [match-sorter](https://github.com/kentcdodds/match-sorter).
-
-## Install
-
-`npm i --save-dev @jukben/emoji-search`
 ## Usage
 
 ```javascript
-import search from "@jukben/emoji-search"
+import unicode from '@jukben/unicode'
 
-search("beer") // [{"keywords":["beer", "relax","beverage","drink","drunk","party","pub","summer","alcohol","booze"],"char":"🍺","fitzpatrick_scale":false,"category":"food_and_drink", name: "beer"},{"keywords":["beers", "relax","beverage","drink","drunk","party","pub","summer","alcohol","booze"],"char":"🍻","fitzpatrick_scale":false,"category":"food_and_drink", name: beers"},{"keywords":["milk_glass", "beverage","drink","cow"],"char":"🥛","fitzpatrick_scale":false,"category":"food_and_drink", name: "milk_glass"},...
-
-search("beer")[0].char // 🍺
+console.log(unicode("hello ❤️").reverse()) // ❤️ olleh
 ```
+
+### API
+
+### `reverse()`
+returns correctly reversed string
+
+`console.log(unicode10("hello ✌🏻").reverse(6)); // ✌🏻 olleh`
+### `length`
+returns correct length
+
+`console.log(unicode10("hello ✌🏻").length); // 6`
+### `charAt(index: number)`
+returns character at the index or undefined
+
+`console.log(unicode10("hello ✌🏻").charAt(6)); // ✌🏻`
+### `hexCodeAt(index: number)`
+returns hax code at the index or undefined
+
+`console.log(unicode10("hello ✌🏻").hexCodeAt(6)); // 270c-1f3fb`
+### `char`
+returns arrays of chars
+
+`console.log(unicode10("hello ✌🏻").chars); // ["h", "e", "l", "l", "o", " ", "✌🏻"]`
+
+## Install
+
+`npm i --save-dev @jukben/unicode`
+
 ## License
 
 <img src="https://media.giphy.com/media/AuIvUrZpzBl04/giphy.gif" width="500">

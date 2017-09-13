@@ -1,21 +1,21 @@
 {
-  "name": "unicode10",
+  "name": "@jukben/unicode",
   "version": "0.0.1",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jukben/unicode10"
+    "url": "https://github.com/jukben/unicode"
   },
   "author": "Jakub Benes <jukben@gmail.com>",
   "main": "lib/index.js",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jukben/unicode10/issues"
+    "url": "https://github.com/jukben/unicode/issues"
   },
-  "homepage": "https://github.com/jukben/unicode10",
+  "homepage": "https://github.com/jukben/unicode",
   "keywords": [
-    "emoji",
-    "search"
+    "unicode 9",
+    "emoji 3.0"
   ],
   "scripts": {
     "test": "jest",
@@ -23,10 +23,7 @@
     "dev": "npm run build -- -w",
     "prepare": "npm run build"
   },
-  "dependencies": {
-    "emojilib": "2.2.9",
-    "match-sorter": "1.8.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
