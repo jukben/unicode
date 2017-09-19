@@ -1,4 +1,5 @@
 # @jukben/unicode
+![Codecov](https://codecov.io/gh/jukben/unicode/branch/master/graph/badge.svg)
 
 Safe work with unicode strings with emoji chars up to *Emoji 3.0* (Unicode 9.0)
 
