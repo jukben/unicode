@@ -1,6 +1,6 @@
 {
   "name": "@jukben/unicode",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Safe work with unicode strings with emoji chars up to *Emoji 3.0* (Unicode 9.0)",
   "repository": {
     "type": "git",
