@@ -17,7 +17,7 @@
   "keywords": ["unicode", "emoji"],
   "scripts": {
     "test": "jest",
-    "build": "babel src/index.js -o lib/index.js",
+    "build": "babel index.js -d lib",
     "dev": "npm run build -- -w",
     "prepare": "npm run build"
   },
