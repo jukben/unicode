@@ -99,3 +99,15 @@ it("Emoji 4.0", () => {
   expect(unicode("Family is cute emoji 👨‍👩‍👧‍👦").length).toEqual(22);
   expect(unicode("Family is cute emoji 👨‍👩‍👧‍👦 - right!").charAt(21)).toEqual("👨‍👩‍👧‍👦");
 });
+
+it("Emoji 5.0", () => {
+  expect(unicode("🧓🏽").chars).toEqual(["🧓🏽"]);
+  expect(unicode("🧚‍♀️").length).toEqual(1);
+  expect(unicode("🧜🏿‍♂️").length).toEqual(1);
+  expect(unicode("merman 🧜🏿‍♂️ dark tone").reverse()).toEqual(
+    "enot krad 🧜🏿‍♂️ namrem"
+  );
+  expect(unicode("merman 🧜🏿‍♂️ dark tone").hexCodeAt(7)).toEqual(
+    "1f9dc-1f3ff-200d-2642-fe0f"
+  );
+});
