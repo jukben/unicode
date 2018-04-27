@@ -5,6 +5,9 @@ const isKeyKap = (prev, curr) =>
 const isFitzpatric = (prev, curr) => {
   return /[\u{1F3FB}-\u{1F3FF}]$/u.test(`${prev}${curr}`);
 };
+const isJoiner = (prev, curr) => {
+  return /\u{200D}$/u.test(curr) || /\u{200D}$/u.test(prev);
+};
 
 const unicode = string => {
   const chars = [...string].reduce((a, v, i, arr) => {
@@ -13,6 +16,11 @@ const unicode = string => {
 
     if (!prev) {
       a.push(curr);
+      return a;
+    }
+
+    if (isJoiner(curr, prev)) {
+      a.splice(a.length - 1, 1, `${a[a.length - 1]}${curr}`);
       return a;
     }
 
@@ -25,14 +33,14 @@ const unicode = string => {
     return a;
   }, []);
 
-  const reverse = () => chars.reverse().join('');
+  const reverse = () => chars.reverse().join("");
 
   const charAt = place => chars[place];
 
   const hexCodeAt = place => {
     if (!chars[place]) return undefined;
 
-    return [...chars[place]].map(a => a.codePointAt(0).toString(16)).join('-');
+    return [...chars[place]].map(a => a.codePointAt(0).toString(16)).join("-");
   };
 
   return {
@@ -40,7 +48,7 @@ const unicode = string => {
     chars,
     charAt,
     hexCodeAt,
-    length: chars.length,
+    length: chars.length
   };
 };
 
