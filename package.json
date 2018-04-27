@@ -1,8 +1,7 @@
 {
   "name": "@jukben/unicode",
-  "version": "0.0.5",
-  "description":
-    "Safe work with unicode strings with emoji chars up to *Emoji 5.0* (Unicode 10.0)",
+  "version": "1.0.0",
+  "description": "Safe work with unicode strings with emoji chars up to *Emoji 5.0* (Unicode 10.0)",
   "repository": {
     "type": "git",
     "url": "https://github.com/jukben/unicode"
@@ -14,7 +13,10 @@
     "url": "https://github.com/jukben/unicode/issues"
   },
   "homepage": "https://github.com/jukben/unicode",
-  "keywords": ["unicode", "emoji"],
+  "keywords": [
+    "unicode",
+    "emoji"
+  ],
   "scripts": {
     "test": "jest",
     "build": "babel index.js -d lib",
