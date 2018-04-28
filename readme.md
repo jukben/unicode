@@ -4,6 +4,11 @@
 
 Safe work with unicode strings with emoji chars up to _Emoji 5.0_ (Unicode 10.0)
 
+## Example
+<img width="630" alt="screen shot 2018-04-28 at 09 23 44" src="https://user-images.githubusercontent.com/8135252/39393478-f35d9b6e-4ac5-11e8-9f67-d633c0008329.png">
+
+[Check out RunKit 🚀](https://runkit.com/jukben/unicode-10-0-js)
+
 ## Install
 
 `npm i --save-dev @jukben/unicode`
